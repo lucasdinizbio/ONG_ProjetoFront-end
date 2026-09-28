@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Voluntários</h1>
+
+        <div class="alert alert-sucesso">
+        Cadastro realizado com sucesso!
+        </div>
+
+        <div class="alert alert-erro">
+        Não foi possível realizar o cadastro. Verifique os campos.
+        </div>
+
+        <p>Preencha os dados abaixo para se cadastrar como voluntário.</p>
+        <nav class="menu">
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <label for="menu-toggle" class="menu-hamburguer">
+        ☰
+    </label>
+
+    <div class="menu-links">
+
+        <a href="index.html">Início</a>
+
+        <div class="dropdown">
+            <a href="projetos.html">Projetos</a>
+
+            <div class="submenu">
+                <a href="projetos.html#encontros">Encontros semanais</a>
+                <a href="projetos.html#oficinas">Oficinas</a>
+                <a href="projetos.html#acampamentos">Acampamentos e trilhas</a>
+                <a href="projetos.html#competicoes">Competições</a>
+            </div>
+        </div>
+
+        <a href="cadastro.html">Cadastro</a>
+
+    </div>
+
+</nav>
+    </header>
+    <form id="formulario-cadastro">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" name="nome" id="nome" required></p>
+            <small id="erro-nome"></small>
+            <p>
+            <label for="cpf">CPF:</label>
+            <input type="text" name="cpf" id="cpf" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" required></p>
+            <small id="erro-cpf"></small>
+            <p>
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" name="data_nascimento" id="data_nascimento" required></p>
+        </fieldset>
+        <fieldset>
+            <legend>Contato</legend>
+            <p>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" name="telefone" id="telefone" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required></p>
+            <p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required></p>
+       </fieldset>
+        <fieldset>
+            <legend>Endereço</legend>
+            <p>
+            <label for="cep">CEP:</label>
+            <input type="text" name="cep" id="cep" pattern="[0-9]{5}-[0-9]{3}" required></p>
+            <small id="erro-cep"></small>
+            <p>
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="endereco" id="endereco" required></p>
+            <p>
+            <label for="numero">Número:</label>
+            <input type="text" name="numero" id="numero" required></p>
+            <p>
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" id="cidade" required></p>
+            <p>
+            <label for="estado">Estado:</label>
+            <input type="text" name="estado" id="estado" required></p>
+        </fieldset>
+        <button type="submit">Cadastrar</button>
+    </form>
+        <h2>Cdastros realizados</h2>
+
+        <div id="lista-cadastros"></div>
+<footer>
+    <p>ONG Escolta Real - Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>

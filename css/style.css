@@ -1,0 +1,377 @@
+:root {
+   /* CORES PRIMÁRIAS */
+    --color-primary: #1B5E20;
+    --color-primary-dark: #0D3B13;
+    --color-primary-light: #4CAF50;
+
+    /* CORES SECUNDÁRIAS */
+    --color-secondary: #FBC02D;
+    --color-secondary-dark: #F57F17;
+
+    /* CORES NEUTRAS */
+    --color-white: #FFFFFF;
+    --color-gray-light: #F5F5F5;
+    --color-gray: #757575;
+    --color-black: #212121;
+
+    /* TIPOGRAFIA */
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-base: 1rem;
+    --font-lg: 1.5rem;
+    --font-xl: 2rem;
+
+    /* ESPAÇAMENTOS */
+
+    --espaco-1: 0.25rem; /* 4px */
+    --espaco-2: 0.5rem; /* 8px */
+    --espaco-3: 0.75rem; /* 12px */
+    --espaco-4: 1rem; /* 16px */
+    --espaco-5: 1.5rem; /* 24px */
+    --espaco-6: 2rem; /* 32px */
+    --espaco-7: 3rem; /* 48px */
+
+    /* CORES DE ESTADO */
+    --color-error: #D32F2F;
+}
+
+body {
+    background-color: var(--color-gray-light);
+    color: var(--color-black);
+}
+
+h1 {
+    color: var(--color-primary-dark);
+    font-size: var(--font-xl);
+    text-align: center;
+    margin-bottom: var(--espaco-4);
+}
+
+p {
+    color: var(--color-black);
+    font-size: var(--font-base);
+    line-height: 1.6;
+    margin-bottom: var(--espaco-4);
+}
+
+nav {
+    background-color: var(--color-primary);
+    padding: var(--espaco-3) var(--espaco-4);
+    text-align: center;
+}
+
+nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    margin: 0 var(--espaco-2);
+    font-size: var(--font-base);
+}
+
+nav a:hover {
+    color: var(--color-secondary);
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--espaco-4);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--espaco-4);
+}
+
+main section {
+    grid-column: span 6;
+}
+
+/* 1. Desktop panorâmico */
+@media (min-width: 1200px) {
+    main {
+        padding: var(--espaco-5);
+    }
+
+    main section {
+        grid-column: span 4;
+    }
+}
+
+/*2 Notebook/destektop menor */
+@media (max-width: 1024px) {
+    main section {
+        grid-column: span 6;
+    }
+}
+
+/*3 Tablet */
+@media (max-width: 900px) {
+    main section {
+        grid-column: span 12;
+    }
+}
+
+/*5 Celular pequeno */
+@media (max-width: 480px) {
+    main {
+        padding: var(--espaco-2);
+    }
+
+    h1 {
+        font-size: var(--font-lg);
+    }
+}
+
+/* Cabeçalho */
+
+header {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espaco-4);
+}
+
+/* Menu de navegacao */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--espaco-3);
+    flex-wrap: wrap;
+}
+
+/*Menu dropdown */
+
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: var(--color-primary);
+    padding: var(--espaco-2);
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* Botão do menu mobile */
+
+.menu input.menu-toggle {
+    display:none;
+}
+
+.menu-hamburguer {
+    display:none;
+}
+
+.menu-links {
+    display:flex;
+    align-items: center;
+    gap: var(--espaco-3);
+}
+
+/* 4. Celular */
+@media (max-width: 768px) {
+    main {
+        padding: var(--espaco-3);
+    }
+
+    nav a {
+        display: block;
+        margin: var(--espaco-2);
+    }
+
+    .menu {
+        flex-direction:column
+    }
+
+    .menu-hamburguer {
+        display:block;
+        color: var(--color-white);
+        font-size: var(--font-lg);
+        cursor: pointer;
+    }
+
+    .menu-links {
+        display:none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-toggle:checked ~ .menu-links {
+        display:flex;
+    }
+}
+
+/* Conteúdo das seções */
+
+section {
+    display:flex;
+    flex-direction: column;
+    gap: var(--espaco-3);
+}
+
+/* Botões */
+
+button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: var(--espaco-3) var(--espaco-4);
+    font-size: var(--font-base);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+button:focus {
+    outline: 3px solid var(--color-secondary);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+button:disabled {
+    background-color: var(--color-gray);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Formulários */
+
+input {
+    padding: var(--espaco-2);
+    border: 2px solid var(--color-gray);   
+    font-size: var(--font-base);
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--color-secondary);
+    outline: none;
+}
+
+input:valid {
+    border-color: var(--color-primary-light);
+}
+
+input:invalid:focus {
+    border-color: var(--color-error);
+}
+
+/* Badges */
+
+.badge {
+    display: inline-block;
+    padding: var(--espaco-1) var(--espaco-2);
+    font-size: var(--font-xs);
+    font-weight: bold;
+}
+
+.badge-ativo {
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+}
+
+/* Alertas */
+
+.alert {
+    padding: var(--espaco-3);
+    margin-bottom: var(--espaco-4);
+    border: 2px solid;
+}
+
+.alert-sucesso {
+    background-color: #E8F5E9;
+    border-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+}
+
+.alert-erro {
+    background-color: #FFEBEE;
+    border-color: var(--color-error);
+    color: var(--color-error);
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo {
+    background-color: var(--color-white);
+    padding: var(--espaco-5);
+    max-width: 500px;
+    width: 80%;
+}
+
+/* Rodapé */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--espaco-3);
+}
+
+/* Campo de erro */
+
+.campo-erro {
+    border: 2px solid red;
+}
+
+.mensagem-erro {
+    display: block;
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+/* Formulário de cadastro */
+
+#formulario-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-4);
+}
+
+#formulario-cadastro fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-2);
+
+    padding: var(--espaco-4);
+    border: 1px solid var(--color-gray);
+}
+
+#formulario-cadastro fieldset p {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-1);
+
+    margin: 0;
+}
+
+#formulario-cadastro input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#formulario-cadastro button {
+    align-self: flex-start;
+}
