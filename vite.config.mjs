@@ -1,0 +1,16 @@
+import { defineConfig } from "vite";
+import { resolve } from "path";
+
+export default defineConfig({
+    base: "/ONG_ProjetoFront-end/",
+
+    build: {
+        rollupOptions: {
+            input: {
+                index: resolve(__dirname, "index.html"),
+                projetos: resolve(__dirname, "html/projetos.html"),
+                cadastro: resolve(__dirname, "html/cadastro.html")
+            }
+        }
+    }
+});
