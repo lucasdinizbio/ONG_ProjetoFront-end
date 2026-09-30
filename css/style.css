@@ -379,3 +379,29 @@ footer {
 #formulario-cadastro button {
     align-self: flex-start;
 }
+
+body.alto-contraste {
+    background-color: #000;
+    color: #fff;
+}
+
+body.alto-contraste header,
+body.alto-contraste main,
+body.alto-contraste footer {
+    background-color: #000;
+    color: #fff;
+}
+
+body.alto-contraste a {
+    color: #ffff00;
+}
+
+body.alto-contraste .menu {
+    background-color: #000;
+}
+
+body.alto-contraste #modo-contraste {
+    background-color: #ffff00;
+    color: #000;
+    border: 2px solid #fff;
+}
