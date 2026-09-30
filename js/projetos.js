@@ -69,3 +69,10 @@ export function renderizarProjetos() {
     listaProjetos.innerHTML = template;
 
 }
+
+const modalOficinas = document.querySelector("#modal-oficinas");
+const botaoFecharModal = document.querySelector("#fechar-modal");
+
+botaoFecharModal.addEventListener("click", function () {
+    modalOficinas.style.display = "none";
+});
