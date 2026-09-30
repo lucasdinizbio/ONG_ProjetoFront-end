@@ -73,6 +73,6 @@ export function renderizarProjetos() {
 const modalOficinas = document.querySelector("#modal-oficinas");
 const botaoFecharModal = document.querySelector("#fechar-modal");
 
-botaoFecharModal.addEventListener("click", function () {
+botaoFecharModal?.addEventListener("click", function () {
     modalOficinas.style.display = "none";
 });
