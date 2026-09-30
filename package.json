@@ -1,0 +1,26 @@
+{
+  "name": "exp1_ads_frontend_ong",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido como atividade prática da disciplina de Desenvolvimento Front-End para Web.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasdinizbio/ONG_ProjetoFront-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lucasdinizbio/ONG_ProjetoFront-end/issues"
+  },
+  "homepage": "https://github.com/lucasdinizbio/ONG_ProjetoFront-end#readme",
+  "devDependencies": {
+    "vite": "^8.3.1"
+  }
+}
