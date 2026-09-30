@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONG Escolta Real</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
-        <img src="../images/logo_ong_escolta.png" alt="Logo da ONG Escolta Real">
+        <img src="./images/logo_ong_escolta.png" alt="Logo da ONG Escolta Real">
         <h1>ONG Escolta Real</h1>
     <nav class="menu">
 
@@ -20,22 +20,26 @@
 
     <div class="menu-links">
 
-        <a href="index.html" data-link data-route="/">Início</a>
+        <a href="./index.html" data-link data-route="/">Início</a>
 
         <div class="dropdown">
-            <a href="projetos.html" data-link data-route="/projetos">Projetos</a>
+            <a href="./html/projetos.html" data-link data-route="/projetos">Projetos</a>
 
             <div class="submenu">
-                <a href="projetos.html#encontros">Encontros semanais</a>
-                <a href="projetos.html#oficinas">Oficinas</a>
-                <a href="projetos.html#acampamentos">Acampamentos e trilhas</a>
-                <a href="projetos.html#competicoes">Competições</a>
+                <a href="./html/projetos.html#encontros">Encontros semanais</a>
+                <a href="./html/projetos.html#oficinas">Oficinas</a>
+                <a href="./html/projetos.html#acampamentos">Acampamentos e trilhas</a>
+                <a href="./html/projetos.html#competicoes">Competições</a>
             </div>
         </div>
 
-        <a href="cadastro.html" data-link data-route="/cadastro">Cadastro</a>
+        <a href="./html/cadastro.html" data-link data-route="/cadastro">Cadastro</a>
 
     </div>
+
+    <button id="modo-contraste" aria-label="Ativar modo de alto contraste">
+        Alto contraste
+    </button>
 
 </nav>
     </header>
@@ -57,10 +61,16 @@
     <p>ONG Escolta Real - Todos os direitos reservados.</p>
 </footer>
 
+<!-- JavaScript da aplicação -->
+<script type="module" src="./js/navegacao.js"></script>
+<script type="module" src="./js/projetos.js"></script>
+<script type="module" src="./js/formulario.js"></script>
+<script type="module" src="./js/acessibilidade.js"></script>
+
 <!-- Biblioteca SweetAlert2 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<!-- JavaScript principal da aplicação -->
-<script type="module" src="../js/script.js"></script>
+<!-- JavaScript principal -->
+<script type="module" src="./js/script.js"></script>
 </body>
 </html>
