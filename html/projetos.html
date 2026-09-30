@@ -34,6 +34,10 @@
         </div>
 
         <a href="cadastro.html">Cadastro</a>
+    
+        <button id="modo-contraste" aria-label="Ativar modo de alto contraste">
+    Alto contraste
+    </button>
 
     </div>
 
@@ -98,7 +102,11 @@
     <p>ONG Escolta Real - Todos os direitos reservados.</p>
 </footer>
 
-<div class="modal" id="modal-oficinas">
+<div class="modal"
+role="dialog"
+aria-modal="true"
+aria-labelledby="titulo-modal"
+id="modal-oficinas">
     <div class="modal-conteudo">
         <h2>Oficinas de Especialidades</h2>
 
@@ -107,7 +115,7 @@
             pelos Desbravadores.
         </p>
 
-        <button type="button" id="fechar-modal">Fechar</button>
+        <button type="button" id="fechar-modal" aria-label="Fechar modal">x</button>
     </div>
 </div>
 
@@ -116,6 +124,7 @@
 </div>
 
 <script src="../js/script.js"></script>
+<script src="../js/acessibilidade.js"></script>
 
 </body>
 </html>

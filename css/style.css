@@ -379,3 +379,57 @@ footer {
 #formulario-cadastro button {
     align-self: flex-start;
 }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+}
+
+body.alto-contraste {
+    background-color: #000;
+    color: #fff;
+}
+
+body.alto-contraste header,
+body.alto-contraste nav,
+body.alto-contraste main,
+body.alto-contraste footer,
+body.alto-contraste section {
+    background-color: #000;
+    color: #fff;
+}
+
+body.alto-contraste h1,
+body.alto-contraste h2,
+body.alto-contraste h3,
+body.alto-contraste p,
+body.alto-contraste label {
+    color: #fff;
+}
+
+body.alto-contraste a {
+    color: #ffff00;
+}
+
+body.alto-contraste button {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #ffff00;
+}
+
+body.alto-contraste input,
+body.alto-contraste textarea,
+body.alto-contraste select {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+body.alto-contraste :focus-visible {
+    outline: 3px solid #ffff00;
+    outline-offset: 3px;
+}
