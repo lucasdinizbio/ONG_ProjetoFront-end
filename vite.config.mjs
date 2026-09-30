@@ -7,9 +7,9 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                index: resolve(__dirname, "index.html"),
-                projetos: resolve(__dirname, "html/projetos.html"),
-                cadastro: resolve(__dirname, "html/cadastro.html")
+                index: resolve(import.meta.dirname, "index.html"),
+                projetos: resolve(import.meta.dirname, "html/projetos.html"),
+                cadastro: resolve(import.meta.dirname, "html/cadastro.html")
             }
         }
     }
